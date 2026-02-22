@@ -466,7 +466,7 @@
     24시간 무료상담 · 무료출장
   </div>
   <h1 class="hero-title fade-up">
-    실력으로 증명하고,<br>가격으로 <span class="gold">놀라게</span> 합니다.
+    결과는 확실하게,<br>가격은 <span class="gold">저렴하게</span>
   </h1>
   <p class="hero-sub fade-up">
     진짜고수는 해당 분야에서 검증된<br>최고의 닥터들이 직접 방문드립니다.<br>일반업체와 결과물의 차이를 경험하세요.
