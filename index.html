@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Black+Han+Sans&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans KR", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Black Han Sans", sans-serif;
+
+  --color-navy: #0b1120;
+  --color-navy-light: #141d30;
+  --color-navy-lighter: #1e2a42;
+  --color-gold: #e8a020;
+  --color-gold-light: #f5c052;
+  
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+}
+
+@layer base {
+  body {
+    @apply bg-navy text-white font-sans antialiased;
+  }
+}
+
+@keyframes pulse-custom {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.4); }
+}
+
+.animate-pulse-custom {
+  animation: pulse-custom 1.5s infinite;
+}
+
+@keyframes bounce-custom {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
+.animate-bounce-custom {
+  animation: bounce-custom 2s infinite;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
