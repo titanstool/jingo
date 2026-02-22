@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
@@ -96,7 +96,8 @@
   }
   .hero-title {
     position: relative;
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
     font-size: clamp(38px, 10vw, 56px);
     line-height: 1.15;
     margin-bottom: 16px;
@@ -171,7 +172,8 @@
     margin-bottom: 12px;
   }
   .section-title {
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
     font-size: clamp(26px, 7vw, 36px);
     line-height: 1.3; margin-bottom: 10px;
   }
@@ -254,9 +256,7 @@
     position: absolute; top: 0; bottom: 0; right: 0;
     overflow: hidden;
   }
-  .ba-after-inner {
-    position: absolute; inset: 0;
-  }
+  .ba-after-inner { position: absolute; inset: 0; }
   .ba-label {
     position: absolute; top: 12px; padding: 4px 10px;
     font-size: 11px; font-weight: 700; border-radius: 50px;
@@ -295,18 +295,13 @@
     font-size: 26px;
   }
   .expert-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
-  .expert-spec {
-    font-size: 11px; color: var(--gold); margin-bottom: 4px;
-    font-weight: 500;
-  }
+  .expert-spec { font-size: 11px; color: var(--gold); margin-bottom: 4px; font-weight: 500; }
   .expert-career { font-size: 11px; color: var(--gray); margin-bottom: 8px; }
   .expert-rating {
     font-size: 13px; font-weight: 700; color: var(--gold-light);
     display: flex; align-items: center; justify-content: center; gap: 4px;
   }
-  .expert-qual {
-    font-size: 10px; color: var(--gray); margin-top: 4px; line-height: 1.4;
-  }
+  .expert-qual { font-size: 10px; color: var(--gray); margin-top: 4px; line-height: 1.4; }
 
   /* ── REVIEWS ── */
   .reviews { background: var(--navy-light); }
@@ -348,7 +343,8 @@
     background: radial-gradient(circle, rgba(232,160,32,0.12) 0%, transparent 70%);
   }
   .cta-section h2 {
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
     font-size: 28px; margin-bottom: 12px; position: relative;
   }
   .cta-section p { font-size: 14px; color: var(--gray); line-height: 1.8; margin-bottom: 32px; position: relative; }
@@ -850,7 +846,6 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 fadeEls.forEach(el => observer.observe(el));
 
-// Trigger hero elements immediately
 document.querySelectorAll('.hero .fade-up').forEach((el, i) => {
   setTimeout(() => el.classList.add('visible'), 200 + i * 120);
 });
@@ -885,10 +880,8 @@ document.querySelectorAll('[data-slider]').forEach(slider => {
   window.addEventListener('mouseup', () => dragging = false);
   window.addEventListener('touchend', () => dragging = false);
 
-  // Init
   setPos(50);
 
-  // Auto demo animation
   let animated = false;
   const sliderObs = new IntersectionObserver(entries => {
     if (entries[0].isIntersecting && !animated) {
